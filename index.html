@@ -47,29 +47,104 @@
             box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
         }
 
+        .sub-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sub-section:nth-child(1) { background-color: #ff9999; color: white; }
+        .sub-section:nth-child(2) { background-color: #99ccff; color: black; }
+        .sub-section:nth-child(3) { background-color: #99ff99; color: black; }
+
+        .sub-section img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sub-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .sub-section .text-content {
+            flex: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #4f80ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background-color: #3b68d9;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #f0f0f5;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+            background-color: #dcdcdc;
+        }
+
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+
         footer {
             text-align: center;
             padding: 15px;
             background-color: #333;
             color: white;
             font-size: 1rem;
-        }
-
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #4f80ff;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: none;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        #backToTop:hover {
-            background: #3b68d9;
         }
     </style>
 </head>
@@ -81,7 +156,33 @@
 
     <main>
         <section>
+            <h2>Informations Importantes</h2>
+            <div class="sub-section">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="text-content">
+                    <h3>Informations générales</h3>
+                    <p>Cette section couvre les bases et les concepts essentiels du projet d'indexation.</p>
+                </div>
+            </div>
+            <div class="sub-section">
+                <img src="image2.jpg" alt="Image 2">
+                <div class="text-content">
+                    <h3>Détails techniques</h3>
+                    <p>Explication approfondie des technologies et des stratégies utilisées pour l'indexation.</p>
+                </div>
+            </div>
+            <div class="sub-section">
+                <img src="image3.jpg" alt="Image 3">
+                <div class="text-content">
+                    <h3>Résumé des performances</h3>
+                    <p>Analyse des résultats obtenus et des perspectives d'amélioration pour le référencement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
             <h2>Formulaire de contact</h2>
+            <p>Contactez-nous pour toute question ou suggestion sur notre projet d'indexation web.</p>
             <form>
                 <label for="name">Nom :</label>
                 <input type="text" id="name" name="name" required>
@@ -90,20 +191,27 @@
                 <button type="submit">Envoyer</button>
             </form>
         </section>
-
-        <section>
-            <h2>Dernières actualités</h2>
-            <p>Suivez les mises à jour du projet et les résultats des tests d'indexation.</p>
-        </section>
-
-        <section>
-            <h2>Ressources utiles</h2>
+        <section class="seo-section">
+            <h2>Optimisation SEO</h2>
+            <p>Le référencement naturel (SEO) est essentiel pour assurer une bonne visibilité dans les moteurs de recherche. 
+            Nous utilisons des techniques avancées pour améliorer l'indexation de notre projet et maximiser sa portée.</p>
+            <p>Voici quelques stratégies clés mises en place :</p>
             <ul>
-                <li><a href="#">Guide SEO débutant</a></li>
-                <li><a href="#">Outils d'analyse SEO</a></li>
+                <li>Utilisation de mots-clés pertinents pour un meilleur classement.</li>
+                <li>Optimisation des balises HTML (title, meta-description, headers).</li>
+                <li>Amélioration de la vitesse de chargement pour une meilleure expérience utilisateur.</li>
+                <li>Optimisation mobile et design responsive.</li>
+                <li>Création de contenu de qualité et structuration efficace des pages.</li>
             </ul>
         </section>
     </main>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
 
     <footer>
         Youhanidhou SALEH - saly8429
@@ -113,31 +221,12 @@
             <li><strong>15 janvier 2025 :</strong> Optimisation SEO.</li>
             <li><strong>28 janvier 2025 :</strong> Ajout URL canonique.</li>
             <li><strong>16 mars 2025 :</strong> Ajout bouton retour en haut.</li>
-            <li><strong>16 mars 2025 :</strong> Ajout formulaire de contact.</li>
-            <li><strong>16 mars 2025 :</strong> Ajout section "Dernières actualités".</li>
-            <li><strong>16 mars 2025 :</strong> Animation fluide sur les sections.</li>
-            <li><strong>16 mars 2025 :</strong> Ajout compteur de visiteurs.</li>
-            <li><strong>16 mars 2025 :</strong> Ajout mode sombre.</li>
+            <li><strong>16 mars 2025 :</strong> Ajout formulaire de contact amélioré.</li>
             <li><strong>16 mars 2025 :</strong> Ajout section "Ressources utiles".</li>
-            <li><strong>16 mars 2025 :</strong> Ajout citation inspirante.</li>
-            <li><strong>16 mars 2025 :</strong> Ajout alerte de bienvenue.</li>
+            <li><strong>16 mars 2025 :</strong> Ajout section à trois sous-sections avec couleurs et interactions.</li>
+            <li><strong>16 mars 2025 :</strong> Ajout section  Réseaux sociaux.</li>
             <li><strong>16 mars 2025 :</strong> Amélioration du design et animations.</li>
         </ul>
     </footer>
-
-    <button id="backToTop">⬆ Retour en haut</button>
-    <script>
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        });
-        backToTop.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
 </body>
 </html>
