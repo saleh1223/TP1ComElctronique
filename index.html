@@ -193,6 +193,50 @@
         }
 
 
+        .vlog-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .vlog-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .vlog-item {
+            width: 320px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .vlog-item:hover {
+            transform: scale(1.05);
+        }
+
+        .vlog-item iframe {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .vlog-title {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+
+
+
+
+
         .social-icons {
             text-align: center;
             margin-top: 20px;
@@ -318,6 +362,26 @@
             </div>
         </section>
 
+
+        <section class="vlog-section">
+            <h2>Notre Vlog</h2>
+            <p>Découvrez un aperçu du Commerce Électronique.</p>
+            <div class="vlog-container">
+                <div class="vlog-item">
+                    <iframe src="https://www.youtube.com/embed/dtXCsTuXysw" allowfullscreen></iframe>
+                    <p class="vlog-title">Présentation du Commerce électronique</p>
+                </div>
+                <div class="vlog-item">
+                    <iframe src="https://www.youtube.com/embed/wdilMRFx22A" allowfullscreen></iframe>
+                    <p class="vlog-title">Stratégies SEO</p>
+                </div>
+                <div class="vlog-item">
+                    <iframe src="https://www.youtube.com/embed/i8GofKnae4E" allowfullscreen></iframe>
+                    <p class="vlog-title">Impact et résultats</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div class="social-icons">
@@ -343,7 +407,14 @@
             <li><strong>17 mars 2025 :</strong> Ajout section  Présentation -Technologies- Impact.</li>
             <li><strong>17 mars 2025 :</strong> Ajout section  Animations Dynamiques.</li>
             <li><strong>17 mars 2025 :</strong> Ajout  de Trois animations distinctes.</li>
+            <li><strong>17 mars 2025 :</strong> Ajout  de Vlog contenant des videos sur le Commerce Electronique.</li>
         </ul>
     </footer>
+
+
+
+
+    
+
 </body>
 </html>
