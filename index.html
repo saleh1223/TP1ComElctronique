@@ -22,14 +22,20 @@
         }
 
         header {
-            background: linear-gradient(90deg, #4f80ff, #6fa1ff);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            font-size: 1.5rem;
-        }
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        background-size: 200% 200%;
+        animation: gradientShift 5s infinite alternate;
+        background-image: linear-gradient(90deg, #f0b2e0, #6fa1ff, #ff4f4f,#f3e84c);
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
 
         main {
             padding: 20px;
@@ -233,11 +239,128 @@
         }
 
 
+        .slider-container {
+        position: relative;
+        max-width: 900px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .slide img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+
+
+    .testimonial-section {
+        text-align: center;
+        padding: 40px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .testimonial {
+        max-width: 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .testimonial:hover {
+        transform: scale(1.05);
+    }
+
+    .testimonial p {
+        font-style: italic;
+        color: #555;
+    }
+
+    .testimonial h4 {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+
+
+
+    .faq-section {
+        text-align: center;
+        padding: 40px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-container {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .faq-item {
+        background: white;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-question {
+        width: 100%;
+        text-align: left;
+        background: #4f80ff;
+        color: white;
+        padding: 15px;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .faq-question:hover {
+        background: #3b68d9;
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 15px;
+        background-color: #fff;
+        color: #333;
+        border-top: 1px solid #ddd;
+    }
 
 
 
 
-        .social-icons {
+
+
+
+     .social-icons {
             text-align: center;
             margin-top: 20px;
             display: flex;
@@ -382,6 +505,84 @@
             </div>
         </section>
 
+
+        <section class="vlog-slider-section">
+            <h2>Galerie du Commerce Électronique</h2>
+            <p>Parcourez quelques aspects clés du commerce électronique grâce à notre diaporama.</p>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="image4.jpg" alt="E-commerce mondial">
+                        <p>Le commerce électronique révolutionne les échanges à l’échelle mondiale.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="image5.jpg" alt="Paiement en ligne">
+                        <p>Les solutions de paiement en ligne facilitent les transactions sécurisées.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="image6.jpg" alt="Marketing digital">
+                        <p>Les stratégies de marketing digital boostent les ventes en ligne.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="image7.jpg" alt="Logistique et livraison">
+                        <p>La logistique joue un rôle clé dans l'expérience client du e-commerce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <h2>Ce que disent nos clients</h2>
+            <p>Découvrez les témoignages de nos clients satisfaits.</p>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"Le commerce électronique a changé ma manière d'acheter en ligne, tout est rapide et sécurisé !"</p>
+                    <h4>- Sophie M.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Grâce aux stratégies de marketing digital, mes ventes ont doublé en un an."</p>
+                    <h4>- Jean D.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Un service client exceptionnel et une livraison rapide, je recommande fortement !"</p>
+                    <h4>- Karim L.</h4>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="faq-section">
+            <h2>Foire Aux Questions (FAQ)</h2>
+            <p>Réponses aux questions les plus posées sur le commerce électronique.</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question"> Qu'est-ce que le commerce électronique ?</button>
+                    <div class="faq-answer">
+                        <p>Le commerce électronique désigne l'achat et la vente de produits ou services sur Internet.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> Les paiements en ligne sont-ils sécurisés ?</button>
+                    <div class="faq-answer">
+                        <p>Oui, grâce aux protocoles de sécurité comme le SSL et l'authentification forte.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> Comment fonctionne la livraison en e-commerce ?</button>
+                    <div class="faq-answer">
+                        <p>Les commandes sont traitées par des entreprises logistiques et livrées via divers transporteurs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> Comment optimiser un site pour le référencement (SEO) ?</button>
+                    <div class="faq-answer">
+                        <p>Optimisez les mots-clés, améliorez la vitesse du site et utilisez des backlinks de qualité.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
     <div class="social-icons">
@@ -392,6 +593,7 @@
     </div>
 
     <footer>
+
         Youhanidhou SALEH - saly8429
         <h3>Changelog :</h3>
         <ul>
@@ -408,12 +610,43 @@
             <li><strong>17 mars 2025 :</strong> Ajout section  Animations Dynamiques.</li>
             <li><strong>17 mars 2025 :</strong> Ajout  de Trois animations distinctes.</li>
             <li><strong>17 mars 2025 :</strong> Ajout  de Vlog contenant des videos sur le Commerce Electronique.</li>
+            <li><strong>18 mars 2025 :</strong> Ajout  de Slider contenant des images sur le Commerce Electronique.</li>
+            <li><strong>18 mars 2025 :</strong> Modification du style de header avec effet dégrade animé.</li>
+            <li><strong>18 mars 2025 :</strong> Ajout de témoignages clients .</li>
+            <li><strong>18 mars 2025 :</strong> Ajout de  Foire aux questions FAQ .</li>
         </ul>
     </footer>
 
 
 
+    <script>
+        let slideIndex = 0;
+    
+        function showSlides() {
+            const slides = document.querySelectorAll(".slide");
+            slideIndex++;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            document.querySelector(".slider").style.transform = `translateX(-${slideIndex * 100}%)`;
+            setTimeout(showSlides, 3000); // Change de slide toutes les 3 secondes
+        }
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlides();
+        });
 
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const answer = button.nextElementSibling;
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                document.querySelectorAll('.faq-answer').forEach(item => item.style.display = 'none');
+                answer.style.display = 'block';
+            }
+        });
+    });
+    </script>
     
 
 </body>
